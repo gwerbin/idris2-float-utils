@@ -70,6 +70,15 @@ namespace Misc
   notNan = rebool1 prim__notNan
 
   export
+  0 invertIsNan : forall x. not (isNan x) = True -> notNan x = True
+  invertIsNan = believe_me
+
+  export
+  0 invertNotNan : forall x. not (notNan x) = True -> isNan x = True
+  invertNotNan = believe_me
+
+
+  export
   inf : Double
   inf = prim__positiveInf
 
@@ -77,13 +86,6 @@ namespace Misc
   export
   negInf : Double
   negInf = prim__negativeInf
-
-
-  0 invertIsNan : forall x. not (isNan x) = True -> notNan x = True
-  invertIsNan = believe_me
-
-  0 invertNotNan : forall x. not (notNan x) = True -> isNan x = True
-  invertNotNan = believe_me
 
 
   %foreign "scheme,chez:idris-flnonpositive"
