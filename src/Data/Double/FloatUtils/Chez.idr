@@ -1,4 +1,4 @@
-module Data.Double.ChezUtils
+module Data.Double.FloatUtils.Chez
 
 import Data.DPair
 import Data.Fin
@@ -99,7 +99,7 @@ namespace Misc
 
   export
   isNonNegative : Double -> Bool
-  isNonNegative x = (prim__isNonNegative x) == 1
+  isNonNegative = rebool prim__isNonNegative
 
 
   public export
@@ -134,13 +134,13 @@ namespace Comparison
 
   export
   doubleEq2 : Double -> Double -> Bool
-  doubleEq2 x y = (prim__doubleEq2 x y) == 1
+  doubleEq2 = rebool2 prim__doubleEq2
   export
   doubleEq3 : Double -> Double -> Double -> Bool
-  doubleEq3 x y z = (prim__doubleEq3 x y z) == 1
+  doubleEq3 = rebool3 prim__doubleEq3
   export
   doubleEq4 : Double -> Double -> Double -> Double -> Bool
-  doubleEq4 w x y z = (prim__doubleEq4 w x y z) == 1
+  doubleEq4 = rebool4 prim__doubleEq4
 
   %foreign "scheme,chez:idris-fl>-2"
   prim__doubleGt2 : Double -> Double -> Int
@@ -151,13 +151,13 @@ namespace Comparison
 
   export
   doubleGt2 : Double -> Double -> Bool
-  doubleGt2 x y = (prim__doubleGt2 x y) == 1
+  doubleGt2 = rebool2 prim__doubleGt2
   export
   doubleGt3 : Double -> Double -> Double -> Bool
-  doubleGt3 x y z = (prim__doubleGt3 x y z) == 1
+  doubleGt3 = rebool3 prim__doubleGt3
   export
   doubleGt4 : Double -> Double -> Double -> Double -> Bool
-  doubleGt4 w x y z = (prim__doubleGt4 w x y z) == 1
+  doubleGt4 = rebool4 prim__doubleGt4
 
   %foreign "scheme,chez:idris-fl>=-2"
   prim__doubleGte2 : Double -> Double -> Int
@@ -168,13 +168,13 @@ namespace Comparison
 
   export
   doubleGte2 : Double -> Double -> Bool
-  doubleGte2 x y = (prim__doubleGte2 x y) == 1
+  doubleGte2 = rebool2 prim__doubleGte2
   export
   doubleGte3 : Double -> Double -> Double -> Bool
-  doubleGte3 x y z = (prim__doubleGte3 x y z) == 1
+  doubleGte3 = rebool3 prim__doubleGte3
   export
   doubleGte4 : Double -> Double -> Double -> Double -> Bool
-  doubleGte4 w x y z = (prim__doubleGte4 w x y z) == 1
+  doubleGte4 = rebool4 prim__doubleGte4
 
   %foreign "scheme,chez:idris-fl<-2"
   prim__doubleLt2 : Double -> Double -> Int
@@ -185,13 +185,13 @@ namespace Comparison
 
   export
   doubleLt2 : Double -> Double -> Bool
-  doubleLt2 x y = (prim__doubleLt2 x y) == 1
+  doubleLt2 = rebool2 prim__doubleLt2
   export
   doubleLt3 : Double -> Double -> Double -> Bool
-  doubleLt3 x y z = (prim__doubleLt3 x y z) == 1
+  doubleLt3 = rebool3 prim__doubleLt3
   export
   doubleLt4 : Double -> Double -> Double -> Double -> Bool
-  doubleLt4 w x y z = (prim__doubleLt4 w x y z) == 1
+  doubleLt4 = rebool4 prim__doubleLt4
 
   %foreign "scheme,chez:idris-fl<=-2"
   prim__doubleLte2 : Double -> Double -> Int
@@ -202,13 +202,13 @@ namespace Comparison
 
   export
   doubleLte2 : Double -> Double -> Bool
-  doubleLte2 x y = (prim__doubleLte2 x y) == 1
+  doubleLte2 = rebool2 prim__doubleLte2
   export
   doubleLte3 : Double -> Double -> Double -> Bool
-  doubleLte3 x y z = (prim__doubleLte3 x y z) == 1
+  doubleLte3 = rebool3 prim__doubleLte3
   export
   doubleLte4 : Double -> Double -> Double -> Double -> Bool
-  doubleLte4 w x y z = (prim__doubleLte4 w x y z) == 1
+  doubleLte4 = rebool4 prim__doubleLte4
 
   export
   %foreign "scheme,chez:max"

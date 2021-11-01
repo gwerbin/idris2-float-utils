@@ -1,5 +1,5 @@
 IPKG = float-utils.ipkg
-SOURCE = src/Data/Double/ChezUtils.idr 
+SOURCE = src/Data/Double/FloatUtils/Chez.idr 
 SUPPORT = support/chez/float-utils.ss #support/chez/float-utils.so
 BUILD_OPTS = --codegen chez --directive extraRuntime=support/chez/float-utils.ss
 
@@ -17,11 +17,11 @@ build: $(IPKG) $(SOURCE) $(SUPPORT)
 
 .PHONY: test
 test: $(IPKG) $(SOURCE) $(SUPPORT)
-	idris2 $(BUILD_OPTS) --find-ipkg --exec 'test' src/Data/Double/ChezUtils.idr
+	idris2 $(BUILD_OPTS) --find-ipkg --exec 'test' src/Data/Double/FloatUtils/Chez.idr
 
 .PHONY: repl
 repl:
-	rlwrap idris2 $(BUILD_OPTS) --find-ipkg src/Data/Double/ChezUtils.idr
+	rlwrap idris2 $(BUILD_OPTS) --find-ipkg src/Data/Double/FloatUtils/Chez.idr
 
 # support/chez/support.so: support/chez/support.sls
 # 	./scripts/chez-compile-library $< $@
