@@ -99,7 +99,7 @@ namespace Misc
 
   export
   isNonNegative : Double -> Bool
-  isNonNegative = rebool prim__isNonNegative
+  isNonNegative = rebool1 prim__isNonNegative
 
 
   public export
