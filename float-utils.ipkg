@@ -6,7 +6,5 @@ authors = "Greg Werbin"
 depends = idris2
 
 sourcedir = "src"
-modules = Data.Double.ChezUtils
--- main = Data.Double.ChezUtils
--- executable = test
+modules = Data.Double.FloatUtils.Chez
 
