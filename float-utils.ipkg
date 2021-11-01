@@ -1,4 +1,4 @@
-package double-utils
+package float-utils
 
 license = "ISC"
 authors = "Greg Werbin"
